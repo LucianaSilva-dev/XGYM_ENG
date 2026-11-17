@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XGYM - Prescrição de treino</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/treino.css">
+</head>
+
+<body>
+  <header>
+    <img src="img/Logo.XGYM.png" alt="XGYM" onerror="this.style.display='none'">
+    <div>
+      <h1>Prescrição de treino</h1>
+      <p>Área do profissional de educação física: monte a ficha de cada aluno.</p>
+    </div>
+  </header>
+  <nav class="navegacao" aria-label="Navegação principal">
+    <a href="index.html">Inscrição</a>
+    <a href="aulas.html">Aulas coletivas</a>
+    <a href="treino.html" aria-current="page">Ficha de treino</a>
+    <a href="registros/registros.html">Inscrições realizadas</a>
+  </nav>
+
+  <main>
+    <div class="grade">
+      <section aria-labelledby="t-biblio">
+        <h2 id="t-biblio">Exercícios</h2>
+        <label for="busca">Buscar exercício</label>
+        <input id="busca" placeholder="Ex.: supino" autocomplete="off">
+        <div class="chips" id="chips" role="group" aria-label="Grupo muscular"></div>
+        <div class="biblio" id="biblio"></div>
+      </section>
+
+      <section aria-labelledby="t-ficha">
+        <h2 id="t-ficha">Ficha do aluno</h2>
+        <div class="cab">
+          <div>
+            <label for="aluno">Nome do aluno</label>
+            <input id="aluno" maxlength="60" autocomplete="off">
+          </div>
+          <div>
+            <label for="cpf">CPF do aluno</label>
+            <input id="cpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" autocomplete="off">
+          </div>
+          <div class="largo">
+            <label for="objetivo">Objetivo do aluno</label>
+            <select id="objetivo">
+              <option>Hipertrofia</option>
+              <option>Emagrecimento</option>
+              <option>Condicionamento físico</option>
+              <option>Reabilitação</option>
+            </select>
+          </div>
+        </div>
+        <div id="itens"></div>
+        <p class="erro" id="erro" role="alert"></p>
+        <div class="rodape">
+          <button type="button" id="salvar">Salvar ficha</button>
+          <button type="button" class="sec" id="limpar">Limpar</button>
+          <span class="meta" id="resumo"></span>
+        </div>
+      </section>
+    </div>
+
+    <section style="margin-top:18px" aria-labelledby="t-salvas">
+      <h2 id="t-salvas">Fichas salvas</h2>
+      <div id="salvas"></div>
+    </section>
+  </main>
+  <div id="aviso" role="status" aria-live="polite"></div>
+
+
+  <script src="js/treino.js"></script>
+</body>
+
+</html>

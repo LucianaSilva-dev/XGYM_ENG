@@ -1,0 +1,64 @@
+.pagina { 
+  max-width: 1100px; 
+}
+
+.tabela-wrap { 
+  overflow-x: auto; 
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-size: .92rem; 
+}
+
+th, td { 
+  text-align: left; 
+  padding: 8px 8px; 
+  border-bottom: 1px solid var(--borda); 
+}
+
+th { 
+  background: #dfe6ee; 
+}
+
+.acoes { 
+  display: flex; 
+  gap: 12px; 
+  flex-wrap: wrap; 
+  margin-top: 16px; 
+}
+
+.acoes a, .acoes button {
+  font: inherit; 
+  font-weight: 600; 
+  text-decoration: none; 
+  cursor: pointer;
+  padding: 10px 18px; 
+  border-radius: 6px; 
+  border: 2px solid var(--destaque);
+  background: var(--destaque); 
+  color: #fff;
+}
+
+.acoes button { 
+  background: #fff; 
+  color: var(--erro); 
+  border-color: var(--erro); 
+}
+
+.btn-excluir {
+  font: inherit; 
+  font-size: .85rem; 
+  font-weight: 600; 
+  cursor: pointer;
+  padding: 4px 10px; 
+  border-radius: 6px;
+  background: #fff; 
+  color: var(--erro); 
+  border: 2px solid var(--erro);
+}
+
+.btn-excluir:hover { 
+  background: var(--erro); color: #fff; 
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XGYM - Grade de aulas coletivas</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/aulas.css">
+</head>
+
+<body>
+  <header>
+    <img src="img/Logo.XGYM.png" alt="XGYM" onerror="this.style.display='none'">
+    <div>
+      <h1>Grade de aulas coletivas</h1>
+      <p>Escolha suas aulas e planeje a semana de treinos.</p>
+    </div>
+  </header>
+  <nav class="navegacao" aria-label="Navegação principal">
+    <a href="index.html">Inscrição</a>
+    <a href="aulas.html" aria-current="page">Aulas coletivas</a>
+    <a href="treino.html">Ficha de treino</a>
+    <a href="registros/registros.html">Inscrições realizadas</a>
+  </nav>
+
+  <main>
+    <div class="topo">
+      <div class="campo">
+        <label for="cpf">Seu CPF</label>
+        <input id="cpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" autocomplete="off">
+        <p class="erro" id="erro" role="alert"></p>
+      </div>
+      <div class="campo">
+        <label for="filtro">Modalidade</label>
+        <select id="filtro">
+          <option value="">Todas</option>
+        </select>
+        <p class="erro"></p>
+      </div>
+    </div>
+
+    <div class="dias" id="dias" role="tablist" aria-label="Dias da semana"></div>
+
+    <div class="layout">
+      <div id="lista" aria-live="polite"></div>
+      <aside>
+        <h2>Minha semana</h2>
+        <div id="minhas"></div>
+      </aside>
+    </div>
+  </main>
+  <div id="aviso" role="status" aria-live="polite"></div>
+
+
+  <script src="js/aulas.js"></script>
+</body>
+
+</html>

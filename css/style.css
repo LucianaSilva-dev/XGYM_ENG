@@ -1,0 +1,179 @@
+:root {
+  --fundo: #ffffff;
+  --superficie: #ffffff;
+  --texto: #000000;
+  --suave: #333333;
+  --borda: #6b7785;
+  --destaque: #14202b;
+  --destaque-escuro: #000000;
+  --erro: #a30000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+.pagina {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+  color: var(--destaque);
+}
+
+.topo p {
+  margin: 4px 0 24px;
+  color: var(--suave);
+}
+
+.bloco {
+  background: var(--superficie);
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+}
+
+.planos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.plano {
+  text-align: left;
+  background: var(--superficie);
+  border: 2px solid var(--borda);
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.plano:hover {
+  border-color: var(--destaque);
+}
+
+.plano[aria-pressed="true"] {
+  border-color: var(--destaque);
+  background: #dfe6ee;
+  box-shadow: 0 0 0 2px var(--destaque);
+}
+
+.plano strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.plano .preco {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--destaque);
+}
+
+.plano .duracao {
+  color: var(--suave);
+  font-size: .9rem;
+}
+
+.campo {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+input {
+  font: inherit;
+  padding: 10px;
+  border: 2px solid var(--borda);
+  border-radius: 6px;
+}
+
+input.invalido {
+  border-color: var(--erro);
+}
+
+.erro {
+  color: var(--erro);
+  font-size: .88rem;
+  min-height: 1.1em;
+}
+
+button[type="submit"] {
+  font: inherit;
+  font-weight: 600;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 20px;
+  cursor: pointer;
+  background: var(--destaque);
+  color: #fff;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background: var(--destaque-escuro);
+}
+
+:focus-visible {
+  outline: 3px solid #f0a500;
+  outline-offset: 2px;
+}
+
+.resultado {
+  border-color:
+    var(--destaque);
+}
+
+.resultado dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 16px;
+  margin: 0;
+}
+
+.resultado dt {
+  color: var(--suave);
+}
+
+.resultado dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.topo {
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 8px;
+}

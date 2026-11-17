@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XGYM - Inscrição online</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="pagina">
+    <header class="topo">
+      <img src="img/Logo.XGYM.png" alt="XGYM" class="logo">
+      <p>Faça sua inscrição online, sem ir até a academia.</p>
+    </header>
+    <nav class="navegacao" aria-label="Navegação principal">
+      <a href="index.html" aria-current="page">Inscrição</a>
+      <a href="aulas.html">Aulas coletivas</a>
+      <a href="treino.html">Ficha de treino</a>
+      <a href="registros/registros.html">Inscrições realizadas</a>
+    </nav>
+
+    <section class="bloco">
+      <h2>Escolha seu plano</h2>
+      <div id="planos" class="planos"></div>
+      <p id="erro-plano" class="erro" role="alert"></p>
+    </section>
+
+    <section class="bloco">
+      <h2>Seus dados</h2>
+      <form id="form-inscricao" novalidate>
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input id="nome" type="text" autocomplete="name">
+          <span class="erro" id="erro-nome"></span>
+        </div>
+        <div class="campo">
+          <label for="cpf">CPF</label>
+          <input id="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" maxlength="14">
+          <span class="erro" id="erro-cpf"></span>
+        </div>
+        <div class="campo">
+          <label for="telefone">Telefone</label>
+          <input id="telefone" type="tel" placeholder="(83) 90000-0000">
+          <span class="erro" id="erro-telefone"></span>
+        </div>
+        <div class="campo">
+          <label for="email">E-mail (opcional)</label>
+          <input id="email" type="email" autocomplete="email">
+          <span class="erro" id="erro-email"></span>
+        </div>
+        <div class="campo">
+          <label for="nascimento">Data de nascimento</label>
+          <input id="nascimento" type="date">
+          <span class="erro" id="erro-nascimento"></span>
+        </div>
+        <button type="submit">Concluir inscrição</button>
+      </form>
+    </section>
+  </main>
+  <script src="js/inscricao.js"></script>
+</body>
+
+</html>

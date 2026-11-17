@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XGYM - Inscrições</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="registros.css">
+</head>
+<body>
+  <main class="pagina">
+    <header class="topo">
+      <img src="../img/Logo.XGYM.png" alt="XGYM" class="logo">
+      <p>Inscrições realizadas</p>
+    </header>
+    <nav class="navegacao" aria-label="Navegação principal">
+      <a href="../index.html">Inscrição</a>
+      <a href="../aulas.html">Aulas coletivas</a>
+      <a href="../treino.html">Ficha de treino</a>
+      <a href="registros.html" aria-current="page">Inscrições realizadas</a>
+    </nav>
+
+    <section class="bloco">
+      <div id="sucesso" class="resultado" hidden>
+        <strong>Inscrição concluída com sucesso!</strong>
+      </div>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Matrícula</th><th>Nome</th><th>CPF</th><th>Telefone</th>
+              <th>Plano</th><th>Valor</th><th>Início</th><th>Vencimento</th><th>Status</th><th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="linhas"></tbody>
+        </table>
+      </div>
+      <p id="vazio" hidden>Nenhuma inscrição registrada ainda.</p>
+      <div class="acoes">
+        <a href="../index.html">Nova inscrição</a>
+        <button type="button" id="limpar">Apagar registros</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="registros.js"></script>
+</body>
+</html>
